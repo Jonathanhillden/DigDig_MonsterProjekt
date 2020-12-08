@@ -5,7 +5,7 @@ using UnityEngine;
 public class Damagebutton : MonoBehaviour
 {
 
-    public Healthbar monsterHealth;
+    public Healthbar healthbar;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,8 @@ public class Damagebutton : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void OnButtonPress()
     {
-        monsterHealth.health--;
+        healthbar.health--;
     }
 }

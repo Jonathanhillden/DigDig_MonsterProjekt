@@ -17,13 +17,13 @@ public class Healthbar : MonoBehaviour
         slider.value = maxhealth;
     }
 
-    public void IncreaseHealth(int health)
+    public void IncreaseHealth()
     {
         health++;
         UpdateHealth(health);
     }
 
-    public void DecreaseHealth(int health)
+    public void DecreaseHealth()
     {
         health--;
         UpdateHealth(health);
