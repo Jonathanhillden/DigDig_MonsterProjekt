@@ -19,14 +19,21 @@ public class Healthbar : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        health++;
-        UpdateHealth(health);
+        if (health < maxhealth)
+        {
+            health++;
+            UpdateHealth(health);
+        }
     }
 
     public void DecreaseHealth()
     {
         health--;
         UpdateHealth(health);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void UpdateHealth(int health)
