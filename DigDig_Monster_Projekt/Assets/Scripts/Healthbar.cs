@@ -12,6 +12,7 @@ public class Healthbar : MonoBehaviour
     public Image monsterImage;
     public Sprite defaultMonster;
     public Sprite damagedMonster;
+    public GameObject monster;
 
     
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class Healthbar : MonoBehaviour
         UpdateHealth(health);
         if (health <= 0)
         {
+            Destroy(monster);
             Destroy(gameObject);
         }
     }
