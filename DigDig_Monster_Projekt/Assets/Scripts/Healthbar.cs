@@ -9,7 +9,11 @@ public class Healthbar : MonoBehaviour
 
     public int maxhealth;
     public int health;
+    public Image monsterImage;
+    public Sprite defaultMonster;
+    public Sprite damagedMonster;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +43,17 @@ public class Healthbar : MonoBehaviour
     public void UpdateHealth(int health)
     {
         slider.value = health;
+
+
+        if (health <= maxhealth/2)
+        {
+            monsterImage.sprite = damagedMonster;
+        }
+        else
+        {
+            monsterImage.sprite = defaultMonster;
+        }
+
     }
 
     // Update is called once per frame
